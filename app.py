@@ -1,7 +1,7 @@
 # app.py
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify 
 import pandas as pd
-
+import  gunicorn
 app = Flask(__name__)
 
 # Load Excel data once when the app starts
@@ -10,6 +10,7 @@ try:
 except FileNotFoundError:
     print("Error: responses.xlsx file not found!")
     df = pd.DataFrame()
+    
 
 @app.route('/')
 def home():
