@@ -1,2 +1,4 @@
-for intallation pip this
- pip install flask pandas openpyxl
+
+ flask 
+pandas 
+openpyxl
